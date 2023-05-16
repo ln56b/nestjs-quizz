@@ -1,8 +1,14 @@
-import { Global, Injectable } from '@nestjs/common';
-import { Quizz } from '../shared/models';
-import { CreateQuizzDTO } from './create-quizz.dto';
+import { Injectable } from '@nestjs/common';
 import { GlobalService } from 'src/utils/global.service';
+import * as HEROES_HEADS from '../shared/heroes-heads.json';
+import * as HEROES_TAILS from '../shared/heroes-tails.json';
+import { Quizz } from '../shared/models';
 import { UpdateQuizzDTO } from './update-quizz.dto';
+
+export enum QuizzNames {
+  HEADS = 'heads',
+  TAILS = 'tails',
+}
 
 @Injectable({})
 export class QuizzService {
@@ -24,15 +30,24 @@ export class QuizzService {
     return GlobalService.allQuizzes[id - 1];
   }
 
-  async postQuizz(createQuizzDTO: CreateQuizzDTO): Promise<Quizz> {
+  async postQuizz(quizzname: string): Promise<Quizz> {
     const previousId = GlobalService.allQuizzes.length
       ? GlobalService.allQuizzes[GlobalService.allQuizzes.length - 1].id
       : 0;
 
     const newQuizz = {
-      ...createQuizzDTO,
       id: previousId + 1,
+      name:
+        quizzname === QuizzNames.HEADS ? QuizzNames.HEADS : QuizzNames.TAILS,
+      categories: quizzname === QuizzNames.HEADS ? HEROES_HEADS : HEROES_TAILS,
+      selectedQuestionIndex: 0,
+      canUseFiftyFiftyJoker: true,
+      canUsePublicVote: true,
+      score: 0,
+      quizzStartedTime: null,
+      quizzEndTime: null,
     };
+
     return newQuizz;
   }
 

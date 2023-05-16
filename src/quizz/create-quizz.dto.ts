@@ -4,6 +4,7 @@ import {
   IsDateString,
   IsNotEmpty,
   IsNumber,
+  IsString,
 } from 'class-validator';
 import { Category } from 'src/shared/models';
 
@@ -11,6 +12,9 @@ export class CreateQuizzDTO {
   @IsNumber()
   @IsNotEmpty()
   selectedQuestionIndex: number;
+
+  @IsString()
+  name: string;
 
   @IsArray()
   categories: Category[];

@@ -19,6 +19,7 @@ export interface Category {
 
 export interface Quizz {
   id: number;
+  name: string;
   categories: Category[];
   selectedQuestionIndex: number;
   canUseFiftyFiftyJoker: boolean;

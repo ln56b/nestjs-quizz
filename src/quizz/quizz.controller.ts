@@ -11,8 +11,6 @@ import {
 } from '@nestjs/common';
 import { Endpoint } from '../shared/endpoint.enum';
 import { QuizzService } from './quizz.service';
-import { CreateQuizzDTO } from './create-quizz.dto';
-import * as HEROES from '../shared/hero.json';
 import { GlobalService } from 'src/utils/global.service';
 import { UpdateQuizzDTO } from './update-quizz.dto';
 
@@ -33,22 +31,11 @@ export class QuizzController {
   }
 
   @Post()
-  async createQuizz(@Body() createQuizzDTO: CreateQuizzDTO, @Res() res) {
-    createQuizzDTO = {
-      categories: HEROES,
-      selectedQuestionIndex: 0,
-      canUseFiftyFiftyJoker: true,
-      canUsePublicVote: true,
-      score: 0,
-      quizzStartedTime: null,
-      quizzEndTime: null,
-    };
-
+  async createQuizz(@Body() name: string, @Res() res) {
     try {
-      const quizz = await this.quizzService.postQuizz(createQuizzDTO);
+      const quizz = await this.quizzService.postQuizz(name);
       GlobalService.allQuizzes.push(quizz);
       return res.status(HttpStatus.OK).json({
-        message: 'Quizz successfully created',
         quizz,
       });
     } catch (err) {
@@ -73,7 +60,6 @@ export class QuizzController {
       }
       GlobalService.allQuizzes[quizz.id - 1] = quizz;
       return res.status(HttpStatus.OK).json({
-        message: 'Quizz successfully updated',
         quizz,
       });
     } catch (err) {
