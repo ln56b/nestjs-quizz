@@ -8,22 +8,26 @@
     },
     "answers": [
       {
-        "id": "1",
+        "id": 1,
+        "questionId": 1,
         "label": "Quartier de Chinatown",
         "isCorrect": false
       },
       {
-        "id": "2",
+        "id": 2,
+        "questionId": 1,
         "label": "Quartier de l'Est",
         "isCorrect": false
       },
       {
-        "id": "3",
+        "id": 3,
+        "questionId": 1,
         "label": "Quartier de Park Row",
         "isCorrect": true
       },
       {
-        "id": "4",
+        "id": 4,
+        "questionId": 1,
         "label": "Quartier de Southside",
         "isCorrect": false
       }
@@ -33,27 +37,30 @@
     "hero": "Hulk",
     "question": {
       "id": 2,
-
       "text": "Dans quelle ville américaine le Dr Bruce Banner est-il devenu Hulk pour la première fois?"
     },
     "answers": [
       {
-        "id": "5",
+        "id": 5,
+        "questionId": 2,
         "label": "New York",
         "isCorrect": false
       },
       {
-        "id": "6",
+        "id": 6,
+        "questionId": 2,
         "label": "Las Vegas",
         "isCorrect": false
       },
       {
-        "id": "7",
+        "id": 7,
+        "questionId": 2,
         "label": "Los Angeles",
         "isCorrect": false
       },
       {
-        "id": "8",
+        "id": 8,
+        "questionId": 2,
         "label": "Dessert Base Gamma au Nouveau-Mexique",
         "isCorrect": true
       }
@@ -63,45 +70,63 @@
     "hero": "Catwoman",
     "question": {
       "id": 3,
-
       "text": "Quel est le vrai nom de Catwoman?"
     },
     "answers": [
-      { "id": "9", "label": "Selina Kyle", "isCorrect": true },
-      { "id": "10", "label": "Pamela Isley", "isCorrect": false },
-      { "id": "11", "label": "Harleen Quinzel", "isCorrect": false },
-      { "id": "12", "label": "Holly Robinson", "isCorrect": false }
+      {
+        "id": 9,
+        "questionId": 3,
+        "label": "Selina Kyle",
+        "isCorrect": true
+      },
+      {
+        "id": 10,
+        "questionId": 3,
+        "label": "Pamela Isley",
+        "isCorrect": false
+      },
+      {
+        "id": 11,
+        "questionId": 3,
+        "label": "Harleen Quinzel",
+        "isCorrect": false
+      },
+      {
+        "id": 12,
+        "questionId": 3,
+        "label": "Holly Robinson",
+        "isCorrect": false
+      }
     ]
   },
   {
     "hero": "Iron Man",
     "question": {
-      "id": 3,
-
+      "id": 4,
       "text": "Dans quelle ville se trouve le siège de Stark Industries, la société de Tony Stark?"
     },
     "answers": [
       {
-        "id": "13",
-
+        "id": 13,
+        "questionId": 4,
         "label": "New York",
         "isCorrect": false
       },
       {
-        "id": "14",
-
+        "id": 14,
+        "questionId": 4,
         "label": "Los Angeles",
         "isCorrect": false
       },
       {
-        "id": "15",
-
+        "id": 15,
+        "questionId": 4,
         "label": "Chicago",
         "isCorrect": false
       },
       {
-        "id": "16",
-
+        "id": 16,
+        "questionId": 4,
         "label": "Malibu",
         "isCorrect": true
       }
@@ -110,32 +135,31 @@
   {
     "hero": "Ant-Man",
     "question": {
-      "id": 4,
-
+      "id": 5,
       "text": "Qui est le créateur du costume d'Ant-Man?"
     },
     "answers": [
       {
-        "id": "17",
-
+        "id": 17,
+        "questionId": 5,
         "label": "Tony Stark",
         "isCorrect": false
       },
       {
-        "id": "18",
-
+        "id": 18,
+        "questionId": 5,
         "label": "Hank Pym",
         "isCorrect": true
       },
       {
-        "id": "19",
-
+        "id": 19,
+        "questionId": 5,
         "label": "Reed Richards",
         "isCorrect": false
       },
       {
-        "id": "20",
-
+        "id": 20,
+        "questionId": 5,
         "label": "Bruce Banner",
         "isCorrect": false
       }
@@ -144,32 +168,31 @@
   {
     "hero": "Captain America",
     "question": {
-      "id": 5,
-
+      "id": 6,
       "text": "Quel est le vrai nom de Captain America?"
     },
     "answers": [
       {
-        "id": "21",
-
+        "id": 21,
+        "questionId": 6,
         "label": "Steve Rogers",
         "isCorrect": true
       },
       {
-        "id": "22",
-
+        "id": 22,
+        "questionId": 6,
         "label": "Bucky Barnes",
         "isCorrect": false
       },
       {
-        "id": "23",
-
+        "id": 23,
+        "questionId": 6,
         "label": "John Walker",
         "isCorrect": false
       },
       {
-        "id": "24",
-
+        "id": 24,
+        "questionId": 6,
         "label": "Isaiah Bradley",
         "isCorrect": false
       }
@@ -178,32 +201,31 @@
   {
     "hero": "Wolverine",
     "question": {
-      "id": 6,
-
+      "id": 7,
       "text": "Quel métal compose le squelette de Wolverine?"
     },
     "answers": [
       {
-        "id": "25",
-
+        "id": 25,
+        "questionId": 7,
         "label": "Fer",
         "isCorrect": false
       },
       {
-        "id": "26",
-
+        "id": 26,
+        "questionId": 7,
         "label": "Plomb",
         "isCorrect": false
       },
       {
-        "id": "27",
-
+        "id": 27,
+        "questionId": 7,
         "label": "Titane",
         "isCorrect": false
       },
       {
-        "id": "28",
-
+        "id": 28,
+        "questionId": 7,
         "label": "Adamantium",
         "isCorrect": true
       }
@@ -212,29 +234,31 @@
   {
     "hero": "Spider Man",
     "question": {
-      "id": 7,
+      "id": 8,
       "text": "Quel est le véritable nom de Spider-Man?"
     },
     "answers": [
       {
-        "id": "29",
+        "id": 29,
+        "questionId": 8,
         "label": "Peter Parker",
         "isCorrect": true
       },
       {
-        "id": "30",
+        "id": 30,
+        "questionId": 8,
         "label": "Eddie Brock",
         "isCorrect": false
       },
       {
-        "id": "31",
-
+        "id": 31,
+        "questionId": 8,
         "label": "Miles Morales",
         "isCorrect": false
       },
       {
-        "id": "32",
-
+        "id": 32,
+        "questionId": 8,
         "label": "Ben Reilly",
         "isCorrect": false
       }
@@ -243,32 +267,31 @@
   {
     "hero": "Sorcière Rouge",
     "question": {
-      "id": 7,
-
+      "id": 9,
       "text": "Quel est le véritable nom de la Sorcière Rouge?"
     },
     "answers": [
       {
-        "id": "33",
-
+        "id": 33,
+        "questionId": 9,
         "label": "Wanda Wilson",
         "isCorrect": false
       },
       {
-        "id": "34",
-
+        "id": 34,
+        "questionId": 9,
         "label": "Wanda Maximoff",
         "isCorrect": true
       },
       {
-        "id": "35",
-
+        "id": 35,
+        "questionId": 9,
         "label": "Wanda Walters",
         "isCorrect": false
       },
       {
-        "id": "36",
-
+        "id": 36,
+        "questionId": 9,
         "label": "Wanda Summers",
         "isCorrect": false
       }
@@ -277,32 +300,31 @@
   {
     "hero": "Black Panther",
     "question": {
-      "id": 8,
-
+      "id": 10,
       "text": "Dans quelle ville fictive se trouve le Wakanda, le pays de Black Panther?"
     },
     "answers": [
       {
-        "id": "37",
-
+        "id": 37,
+        "questionId": 10,
         "label": "Zamunda",
         "isCorrect": false
       },
       {
-        "id": "38",
-
+        "id": 38,
+        "questionId": 10,
         "label": "Genosha",
         "isCorrect": false
       },
       {
-        "id": "39",
-
+        "id": 39,
+        "questionId": 10,
         "label": "Sokovia",
         "isCorrect": false
       },
       {
-        "id": "40",
-
+        "id": 40,
+        "questionId": 10,
         "label": "Wakanda",
         "isCorrect": true
       }

@@ -2,32 +2,31 @@
   {
     "hero": "Wonder Woman",
     "question": {
-      "id": 9,
-
+      "id": 11,
       "text": "De quelle île mythique est originaire Wonder Woman?"
     },
     "answers": [
       {
-        "id": "41",
-
+        "id": 41,
+        "questionId": 11,
         "label": "Atlantis",
         "isCorrect": false
       },
       {
-        "id": "42",
-
+        "id": 42,
+        "questionId": 11,
         "label": "Avalon",
         "isCorrect": false
       },
       {
-        "id": "43",
-
+        "id": 43,
+        "questionId": 11,
         "label": "Themyscira",
         "isCorrect": true
       },
       {
-        "id": "44",
-
+        "id": 44,
+        "questionId": 11,
         "label": "Elysium",
         "isCorrect": false
       }
@@ -36,32 +35,31 @@
   {
     "hero": "La Guêpe",
     "question": {
-      "id": 10,
-
+      "id": 12,
       "text": "Qui a inventé le costume de la Guêpe?"
     },
     "answers": [
       {
-        "id": "45",
-
+        "id": 45,
+        "questionId": 12,
         "label": "Hank Pym",
         "isCorrect": true
       },
       {
-        "id": "46",
-
+        "id": 46,
+        "questionId": 12,
         "label": "Tony Stark",
         "isCorrect": false
       },
       {
-        "id": "47",
-
+        "id": 47,
+        "questionId": 12,
         "label": "Reed Richards",
         "isCorrect": false
       },
       {
-        "id": "48",
-
+        "id": 48,
+        "questionId": 12,
         "label": "Bruce Banner",
         "isCorrect": false
       }
@@ -70,32 +68,31 @@
   {
     "hero": "Le Fauve",
     "question": {
-      "id": 11,
-
+      "id": 13,
       "text": "Dans quelle équipe de super-héros le Fauve a-t-il été membre?"
     },
     "answers": [
       {
-        "id": "39",
-
+        "id": 49,
+        "questionId": 13,
         "label": "Les Vengeurs",
         "isCorrect": true
       },
       {
-        "id": "50",
-
+        "id": 50,
+        "questionId": 13,
         "label": "La Justice League",
         "isCorrect": false
       },
       {
-        "id": "51",
-
+        "id": 51,
+        "questionId": 13,
         "label": "Les X-Men",
         "isCorrect": true
       },
       {
-        "id": "52",
-
+        "id": 52,
+        "questionId": 13,
         "label": "La Patrouille X",
         "isCorrect": true
       }
@@ -104,32 +101,32 @@
   {
     "hero": "Green Lantern",
     "question": {
-      "id": 12,
+      "id": 14,
 
       "text": "Quel est le nom de l'anneau magique utilisé par Green Lantern ?"
     },
     "answers": [
       {
-        "id": "53",
-
+        "id": 53,
+        "questionId": 14,
         "label": "L'anneau de puissance",
         "isCorrect": false
       },
       {
-        "id": "54",
-
+        "id": 54,
+        "questionId": 14,
         "label": "L'anneau de la lanterne",
         "isCorrect": false
       },
       {
-        "id": "55",
-
+        "id": 55,
+        "questionId": 14,
         "label": "L'anneau vert",
         "isCorrect": true
       },
       {
-        "id": "56",
-
+        "id": 56,
+        "questionId": 14,
         "label": "L'anneau des étoiles",
         "isCorrect": false
       }
@@ -138,32 +135,31 @@
   {
     "hero": "Aquaman",
     "question": {
-      "id": 13,
-
+      "id": 15,
       "text": "Dans quelle ville fictive se trouve Atlantis, la cité sous-marine d'Aquaman ?"
     },
     "answers": [
       {
-        "id": "57",
-
+        "id": 57,
+        "questionId": 15,
         "label": "Olympus",
         "isCorrect": false
       },
       {
-        "id": "58",
-
+        "id": 58,
+        "questionId": 15,
         "label": "Themyscira",
         "isCorrect": false
       },
       {
-        "id": "59",
-
+        "id": 59,
+        "questionId": 15,
         "label": "Atlantide",
         "isCorrect": true
       },
       {
-        "id": "60",
-
+        "id": 60,
+        "questionId": 15,
         "label": "Asgard",
         "isCorrect": false
       }
@@ -172,32 +168,31 @@
   {
     "hero": "Flash",
     "question": {
-      "id": 14,
-
+      "id": 16,
       "text": "Quel est le nom du scientifique qui a donné ses pouvoirs à Flash ?"
     },
     "answers": [
       {
-        "id": "61",
-
+        "id": 61,
+        "questionId": 16,
         "label": "Harrison Wells",
         "isCorrect": false
       },
       {
-        "id": "62",
-
+        "id": 62,
+        "questionId": 16,
         "label": "Eobard Thawne",
         "isCorrect": false
       },
       {
-        "id": "63",
-
+        "id": 63,
+        "questionId": 16,
         "label": "Barry Allen",
         "isCorrect": true
       },
       {
-        "id": "64",
-
+        "id": 64,
+        "questionId": 16,
         "label": "Jay Garrick",
         "isCorrect": false
       }
@@ -206,32 +201,31 @@
   {
     "hero": "Thor",
     "question": {
-      "id": 15,
-
+      "id": 17,
       "text": "Dans la mythologie nordique, quel est le nom du marteau magique utilisé par Thor ?"
     },
     "answers": [
       {
-        "id": "65",
-
+        "id": 65,
+        "questionId": 17,
         "label": "Gungnir",
         "isCorrect": false
       },
       {
-        "id": "66",
-
+        "id": 66,
+        "questionId": 17,
         "label": "Mjolnir",
         "isCorrect": true
       },
       {
-        "id": "67",
-
+        "id": 67,
+        "questionId": 17,
         "label": "Frostmourne",
         "isCorrect": false
       },
       {
-        "id": "68",
-
+        "id": 68,
+        "questionId": 17,
         "label": "Stormbreaker",
         "isCorrect": false
       }
@@ -240,30 +234,31 @@
   {
     "hero": "Doctor Strange",
     "question": {
-      "id": 16,
-
+      "id": 18,
       "text": "Quel est le nom de l'artefact magique utilisé par Doctor Strange pour contrôler les dimensions et les réalités alternatives ?"
     },
     "answers": [
       {
-        "id": "69",
+        "id": 69,
+        "questionId": 18,
         "label": "Le bâton de la vérité",
         "isCorrect": false
       },
       {
-        "id": "70",
+        "id": 70,
+        "questionId": 18,
         "label": "La baguette magique",
         "isCorrect": false
       },
       {
-        "id": "71",
-
+        "id": 71,
+        "questionId": 18,
         "label": "L'œil d'Agamotto",
         "isCorrect": true
       },
       {
-        "id": "72",
-
+        "id": 72,
+        "questionId": 18,
         "label": "Le talisman de l'infini",
         "isCorrect": false
       }
@@ -272,32 +267,31 @@
   {
     "hero": "Batgirl",
     "question": {
-      "id": 17,
-
+      "id": 19,
       "text": "Quel est le nom de la première personne à endosser le costume de Batgirl?"
     },
     "answers": [
       {
-        "id": "73",
-
+        "id": 73,
+        "questionId": 19,
         "label": "Barbara Wilson",
         "isCorrect": false
       },
       {
-        "id": "74",
-
+        "id": 74,
+        "questionId": 19,
         "label": "Cassandra Cain",
         "isCorrect": false
       },
       {
-        "id": "75",
-
+        "id": 75,
+        "questionId": 19,
         "label": "Helena Bertinelli",
         "isCorrect": false
       },
       {
-        "id": "76",
-
+        "id": 76,
+        "questionId": 19,
         "label": "Barbara Gordon",
         "isCorrect": true
       }
@@ -306,32 +300,31 @@
   {
     "hero": "Supergirl",
     "question": {
-      "id": 18,
-
+      "id": 20,
       "text": "Quel est le nom de l'alter-ego de Supergirl ?"
     },
     "answers": [
       {
-        "id": "77",
-
+        "id": 77,
+        "questionId": 20,
         "label": "Lois Lane",
         "isCorrect": false
       },
       {
-        "id": "78",
-
+        "id": 78,
+        "questionId": 20,
         "label": "Kara Danvers",
         "isCorrect": true
       },
       {
-        "id": "79",
-
+        "id": 79,
+        "questionId": 20,
         "label": "Linda Lee",
         "isCorrect": false
       },
       {
-        "id": "80",
-
+        "id": 80,
+        "questionId": 20,
         "label": "Diana Prince",
         "isCorrect": false
       }

@@ -1,30 +1,29 @@
 export interface Answer {
   id: number;
-  text: string;
+  label: string;
   isCorrect: boolean;
 }
 
 export interface Question {
   id: number;
   text: string;
-  answers?: Answer[];
-  index?: number;
-  userAnswerId?: string;
 }
 
 export interface Category {
   hero: string;
   question: Question;
+  answers: Answer[];
 }
 
 export interface Quizz {
   id: number;
   name: string;
   categories: Category[];
-  selectedQuestionIndex: number;
+  selectedQuestionIndex?: number;
   canUseFiftyFiftyJoker: boolean;
   canUsePublicVote: boolean;
   score: number;
-  quizzStartedTime: string;
-  quizzEndTime: string;
+  userAnswers: Answer[];
+  quizzStartedTime: Date;
+  quizzEndTime: Date;
 }

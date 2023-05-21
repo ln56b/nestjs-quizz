@@ -1,23 +1,24 @@
 import {
   IsArray,
   IsBoolean,
-  IsDateString,
-  IsNotEmpty,
+  IsDate,
   IsNumber,
   IsString,
 } from 'class-validator';
-import { Category } from 'src/shared/models';
+import { Category, Answer } from 'src/shared/models';
 
 export class CreateQuizzDTO {
-  @IsNumber()
-  @IsNotEmpty()
-  selectedQuestionIndex: number;
-
   @IsString()
   name: string;
 
+  @IsNumber()
+  selectedQuestionIndex: number;
+
   @IsArray()
   categories: Category[];
+
+  @IsArray()
+  userAnswers: Answer[];
 
   @IsBoolean()
   canUseFiftyFiftyJoker: boolean;
@@ -28,9 +29,9 @@ export class CreateQuizzDTO {
   @IsNumber()
   score: number;
 
-  @IsDateString() // TODO check format
+  @IsDate() // TODO check format
   quizzStartedTime: string;
 
-  @IsDateString() // TODO check format
+  @IsDate() // TODO check format
   quizzEndTime: string;
 }
