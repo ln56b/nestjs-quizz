@@ -23,28 +23,27 @@ export class QuizzService {
   };
 
   async getQuizzes(): Promise<Quizz[]> {
-    return GlobalService.allQuizzes;
+    return GlobalService.allQuizzes.filter((q) => q.quizzEndTime !== null);
   }
 
   async getOneQuizz(id: number): Promise<Quizz> {
     return GlobalService.allQuizzes[id - 1];
   }
 
-  async postQuizz(quizzname: string): Promise<Quizz> {
+  async postQuizz(name: string): Promise<Quizz> {
     const previousId = GlobalService.allQuizzes.length
       ? GlobalService.allQuizzes[GlobalService.allQuizzes.length - 1].id
       : 0;
-
     const newQuizz = {
       id: previousId + 1,
-      name:
-        quizzname === QuizzNames.HEADS ? QuizzNames.HEADS : QuizzNames.TAILS,
-      categories: quizzname === QuizzNames.HEADS ? HEROES_HEADS : HEROES_TAILS,
+      name: name === QuizzNames.HEADS ? QuizzNames.HEADS : QuizzNames.TAILS,
+      categories: name === QuizzNames.HEADS ? HEROES_HEADS : HEROES_TAILS,
       selectedQuestionIndex: 0,
+      userAnswers: [],
       canUseFiftyFiftyJoker: true,
       canUsePublicVote: true,
       score: 0,
-      quizzStartedTime: null,
+      quizzStartedTime: new Date(),
       quizzEndTime: null,
     };
 
@@ -55,10 +54,19 @@ export class QuizzService {
     id: number,
     updateQuizzDTO: UpdateQuizzDTO,
   ): Promise<Quizz> {
+    const currentQuizz = GlobalService.allQuizzes[id - 1];
     const quizzToUpdate = {
-      ...GlobalService.allQuizzes[id - 1],
-      updateQuizzDTO,
+      id: currentQuizz.id,
+      name: currentQuizz.name,
+      selectedQuestionIndex: updateQuizzDTO.selectedQuestionIndex,
+      categories: currentQuizz.categories,
+      userAnswers: updateQuizzDTO.userAnswers,
+      canUseFiftyFiftyJoker: updateQuizzDTO.canUseFiftyFiftyJoker,
+      canUsePublicVote: updateQuizzDTO.canUsePublicVote,
+      score: updateQuizzDTO.score,
+      quizzStartedTime: currentQuizz.quizzStartedTime,
+      quizzEndTime: updateQuizzDTO.quizzEndTime,
     };
-    return quizzToUpdate;
+    return quizzToUpdate; // TODO refacto
   }
 }

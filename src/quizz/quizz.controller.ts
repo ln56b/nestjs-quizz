@@ -31,9 +31,9 @@ export class QuizzController {
   }
 
   @Post()
-  async createQuizz(@Body() name: string, @Res() res) {
+  async createQuizz(@Body() body: { name: string }, @Res() res) {
     try {
-      const quizz = await this.quizzService.postQuizz(name);
+      const quizz = await this.quizzService.postQuizz(body.name);
       GlobalService.allQuizzes.push(quizz);
       return res.status(HttpStatus.OK).json({
         quizz,
