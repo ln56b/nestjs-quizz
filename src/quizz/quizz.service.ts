@@ -69,4 +69,8 @@ export class QuizzService {
     };
     return quizzToUpdate; // TODO refacto
   }
+
+  async deleteQuizz(id: number): Promise<Quizz> {
+    return GlobalService.allQuizzes.find((q) => q.id === Number(id));
+  }
 }

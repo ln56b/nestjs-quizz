@@ -19,6 +19,6 @@ export class UpdateQuizzDTO {
   @IsNumber()
   score: number;
 
-  @IsDateString() // TODO check format
+  @IsDateString()
   quizzEndTime: Date;
 }

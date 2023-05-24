@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpStatus,
   NotFoundException,
@@ -55,7 +56,6 @@ export class QuizzController {
     try {
       const quizz = await this.quizzService.updateQuizz(id, updateQuizzDTO);
       if (!quizz) {
-        // TODO check try / catch
         throw new NotFoundException('Quizz does not exist');
       }
       GlobalService.allQuizzes[quizz.id - 1] = quizz;
@@ -68,5 +68,19 @@ export class QuizzController {
         status: 400,
       });
     }
+  }
+
+  @Delete(':id')
+  async deleteQuizz(@Param('id') id: number, @Res() res) {
+    if (!id) {
+      throw new NotFoundException('quizz does not exist');
+    }
+    const quizz = await this.quizzService.deleteQuizz(id);
+    GlobalService.allQuizzes = GlobalService.allQuizzes.filter(
+      (q) => q.id !== quizz.id,
+    );
+    return res
+      .status(HttpStatus.OK)
+      .json({ message: 'Quizz successfully deleted' });
   }
 }

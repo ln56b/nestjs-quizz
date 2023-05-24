@@ -29,9 +29,9 @@ export class CreateQuizzDTO {
   @IsNumber()
   score: number;
 
-  @IsDate() // TODO check format
+  @IsDate()
   quizzStartedTime: string;
 
-  @IsDate() // TODO check format
+  @IsDate()
   quizzEndTime: string;
 }
