@@ -1,7 +1,5 @@
-import { PartialType, PickType } from '@nestjs/mapped-types';
-import { CreateQuizzDTO } from './create-quizz.dto';
 import { IsArray, IsBoolean, IsDateString, IsNumber } from 'class-validator';
-import { Answer } from 'src/shared/models';
+import { Answer, Duration } from 'src/shared/models';
 
 export class UpdateQuizzDTO {
   @IsNumber()
@@ -19,6 +17,9 @@ export class UpdateQuizzDTO {
   @IsNumber()
   score: number;
 
-  @IsDateString()
-  quizzEndTime: Date;
+  @IsNumber()
+  totalTime: Duration;
+
+  @IsBoolean()
+  isCompleted: boolean;
 }

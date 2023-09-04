@@ -24,6 +24,11 @@ export interface Quizz {
   canUsePublicVote: boolean;
   score: number;
   userAnswers: Answer[];
-  quizzStartedTime: Date;
-  quizzEndTime: Date;
+  totalTime: Duration;
+  isCompleted: boolean;
+}
+
+export interface Duration {
+  min: number;
+  sec: number;
 }

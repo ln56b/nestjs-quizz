@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { GlobalService } from 'src/utils/global.service';
 import * as HEROES_HEADS from '../shared/heroes-heads.json';
 import * as HEROES_TAILS from '../shared/heroes-tails.json';
-import { Quizz } from '../shared/models';
+import { Duration, Quizz } from '../shared/models';
 import { UpdateQuizzDTO } from './update-quizz.dto';
 
 export enum QuizzNames {
@@ -18,12 +18,12 @@ export class QuizzService {
     canUseFiftyFiftyJoker: boolean;
     canUsePublicVote: boolean;
     score: number;
-    quizzStartedTime: string;
-    quizzEndTime: string;
+    totalTime: Duration;
+    isCompleted: boolean;
   };
 
   async getQuizzes(): Promise<Quizz[]> {
-    return GlobalService.allQuizzes.filter((q) => q.quizzEndTime !== null);
+    return GlobalService.allQuizzes.filter((q) => q.isCompleted);
   }
 
   async getOneQuizz(id: number): Promise<Quizz> {
@@ -43,10 +43,12 @@ export class QuizzService {
       canUseFiftyFiftyJoker: true,
       canUsePublicVote: true,
       score: 0,
-      quizzStartedTime: new Date(),
-      quizzEndTime: null,
+      totalTime: {
+        min: null,
+        sec: null,
+      },
+      isCompleted: false,
     };
-
     return newQuizz;
   }
 
@@ -64,8 +66,8 @@ export class QuizzService {
       canUseFiftyFiftyJoker: updateQuizzDTO.canUseFiftyFiftyJoker,
       canUsePublicVote: updateQuizzDTO.canUsePublicVote,
       score: updateQuizzDTO.score,
-      quizzStartedTime: currentQuizz.quizzStartedTime,
-      quizzEndTime: updateQuizzDTO.quizzEndTime,
+      totalTime: updateQuizzDTO.totalTime,
+      isCompleted: updateQuizzDTO.isCompleted,
     };
     return quizzToUpdate; // TODO refacto
   }

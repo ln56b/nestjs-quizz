@@ -5,7 +5,7 @@ import {
   IsNumber,
   IsString,
 } from 'class-validator';
-import { Category, Answer } from 'src/shared/models';
+import { Category, Answer, Duration } from 'src/shared/models';
 
 export class CreateQuizzDTO {
   @IsString()
@@ -29,9 +29,9 @@ export class CreateQuizzDTO {
   @IsNumber()
   score: number;
 
-  @IsDate()
-  quizzStartedTime: string;
+  @IsNumber()
+  totalTime: Duration;
 
-  @IsDate()
-  quizzEndTime: string;
+  @IsBoolean()
+  isCompleted: boolean;
 }
